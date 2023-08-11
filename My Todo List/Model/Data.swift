@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Data {
+struct Data {
     var title: String
     var description: String
     var isCompleted: Bool

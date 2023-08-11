@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  My Todo List
 //
-//  Created by t2023-m0046 on 2023/08/01.
+//  Created by 랑 on 2023/08/01.
 //
 
 import UIKit

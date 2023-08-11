@@ -1,27 +1,24 @@
 //
-//  ToDoTableViewCell.swift
+//  CompleteTableViewCell.swift
 //  My Todo List
 //
-//  Created by 랑 on 2023/08/04.
+//  Created by 랑 on 2023/08/09.
 //
 
 import UIKit
 
-class ToDoTableViewCell: UITableViewCell {
+class CompleteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var checkSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-    
-}
 
+}
