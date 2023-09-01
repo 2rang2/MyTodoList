@@ -16,33 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ9-cu-mvq">
-                                <rect key="frame" x="138" y="387" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ9-cu-mvq">
+                                <rect key="frame" x="138" y="363" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="할일 확인하기"/>
                                 <connections>
                                     <action selector="toDoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBd-4R-hca"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-bw-vir">
-                                <rect key="frame" x="138" y="452" width="117" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-bw-vir">
+                                <rect key="frame" x="138" y="428" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="완료한일 보기"/>
                                 <connections>
                                     <action selector="completedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Fn-eX-CPy"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="하기 싫어 짤" translatesAutoresizingMaskIntoConstraints="NO" id="9wX-Lg-KWu">
-                                <rect key="frame" x="65" y="197" width="262" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wX-Lg-KWu">
+                                <rect key="frame" x="96.666666666666686" y="153" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="H08-aw-Xym"/>
+                                    <constraint firstAttribute="width" constant="200" id="ubn-4O-VrC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DZ9-cu-mvq" firstAttribute="top" secondItem="9wX-Lg-KWu" secondAttribute="bottom" constant="60" id="8H9-mL-sD3"/>
+                            <constraint firstItem="9wX-Lg-KWu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="BHy-EP-yZY"/>
+                            <constraint firstItem="DZ9-cu-mvq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M3x-3y-5h2"/>
+                            <constraint firstItem="wfm-bw-vir" firstAttribute="top" secondItem="DZ9-cu-mvq" secondAttribute="bottom" constant="30" id="Pw8-wI-H6m"/>
+                            <constraint firstItem="9wX-Lg-KWu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r17-16-Xo5"/>
+                            <constraint firstItem="wfm-bw-vir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sgD-Cy-Yag"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Chj-By-OwC"/>
+                    <connections>
+                        <outlet property="imageView" destination="9wX-Lg-KWu" id="bl5-JO-OAp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,7 +226,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="하기 싫어 짤" width="989" height="545"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

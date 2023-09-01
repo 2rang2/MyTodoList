@@ -18,6 +18,10 @@ class ToDoTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    @IBAction func switchAction(_ sender: Any) {
+        UserDefaults.standard.set(checkSwitch.isOn, forKey: "switchState")
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

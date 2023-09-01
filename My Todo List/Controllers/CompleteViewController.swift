@@ -9,7 +9,7 @@ import UIKit
 
 class CompleteViewController: UIViewController {
     
-    var dataManager: DataManager!
+    var dataManager: TodoManager!
     
     @IBOutlet weak var completeTableView: UITableView!
     
