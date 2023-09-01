@@ -17,9 +17,9 @@ class TodoManager {
     ]
     
     var sortedTodoList: [TodoSortedByDate] = [
-    TodoSortedByDate(date: Date(), todoList: [Todo]),
-    TodoSortedByDate(date: <#T##Date#>, todoList: <#T##[Todo]#>),
-    TodoSortedByDate(date: <#T##Date#>, todoList: <#T##[Todo]#>),
+        TodoSortedByDate(date: Date(), todoList: [Todo]),
+        TodoSortedByDate(date: <#T##Date#>, todoList: <#T##[Todo]#>),
+        TodoSortedByDate(date: <#T##Date#>, todoList: <#T##[Todo]#>),
     ]
     
     func addList(_ newTodo: Todo) {
