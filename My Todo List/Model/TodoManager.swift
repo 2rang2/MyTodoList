@@ -5,43 +5,78 @@
 //  Created by 랑 on 2023/08/07.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
 class TodoManager {
-    static let defaults = UserDefaults.standard
+    static let shared: TodoManager = TodoManager()
+
+    //Core Data 초기화
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    lazy var context = appDelegate?.persistentContainer.viewContext
     
-    var todoList: [Todo] = [
-        Todo(date: Date.getDate("08/25/2023"), title: "알고리즘 풀기", description: "프로그래머스 입문", isCompleted: false),
-        Todo(date: Date.getDate("08/30/2023"), title: "TIL 작성하기", description: "Velog", isCompleted: false),
-        Todo(date: Date.getDate("08/28/2023"), title: "질문 & 피드백", description: "Gather", isCompleted: false)
-    ]
-    
-    var sortedTodoList: [TodoSortedByDate] = [
-        TodoSortedByDate(date: Date(), todoList: [Todo]),
-        TodoSortedByDate(date: <#T##Date#>, todoList: <#T##[Todo]#>),
-        TodoSortedByDate(date: <#T##Date#>, todoList: <#T##[Todo]#>),
-    ]
-    
-    func addList(_ newTodo: Todo) {
-        todoList.append(newTodo)
-        updateList(todoList)
+    func save(title: String,
+              details: String,
+              isCompleted: Bool = false) {
+        if let context = context,
+           let entity: NSEntityDescription = NSEntityDescription.entity(forEntityName: "Todo", in: context) {
+            if let todoList: Todo = NSManagedObject(entity: entity, insertInto: context) as? Todo {
+                todoList.title = title
+                todoList.details = details
+                todoList.isCompleted = isCompleted
+                do {
+                    try context.save()
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
     
-    func updateList(_ todoList: [Todo]) {
-        if let encodedTodo = try? JSONEncoder().encode(todoList) {
-            TodoManager.defaults.set(encodedTodo, forKey: "TodoList")
-        }                                                                               //https://zeddios.tistory.com/373
-    }
-    
-    func setNewTodoList() -> [Todo] {
-        guard let encodedTodo = TodoManager.defaults.object(forKey: "TodoList") as? Data,
-              let todoList = try? JSONDecoder().decode([Todo].self, from: encodedTodo) else {
-            return todoList
+    func loadTodos() -> [Todo] {
+        var todoList: [Todo] = [Todo]()
+        
+        if let context = context {
+            let request: NSFetchRequest<NSManagedObject> = NSFetchRequest<NSManagedObject>(entityName: "Todo")
+            do {
+                if let fetchResult: [Todo] = try context.fetch(request) as? [Todo] {
+                    todoList = fetchResult
+                }
+            } catch {
+                print(error)
+            }
         }
         return todoList
     }
     
     func completeList() -> [Todo] {
-        return todoList.filter { $0.isCompleted == true }
+//        loadTodos().filter(\.isCompleted)     
+//        > 이렇게도 쓸 수 있지만 효율적이지 못함. 모든 데이터를 fetch 한 후에 거기서 isCompleted = true 인 애들을 골라내는거니까. 반면에 아래는 처음부터 isCompleted = true만 fetch 해옴.
+        
+        var todoList: [Todo] = [Todo]()
+        
+        if let context = context {
+            let request: NSFetchRequest<NSManagedObject> = NSFetchRequest<NSManagedObject>(entityName: "Todo")
+            let filterCompleted = NSPredicate(format: "isCompleted == %@", NSNumber(value: true))
+            request.predicate = filterCompleted
+            do {
+                if let fetchResult: [Todo] = try context.fetch(request) as? [Todo] {
+                    todoList = fetchResult
+                }
+            } catch {
+                print(error)
+            }
+        }
+        return todoList
+    }
+    
+    func updateList() {
+        if let context = context {
+            do {
+                try context.save()  // throws, try? context?.save()
+            } catch {
+                print(error)
+            }
+        }
     }
 }

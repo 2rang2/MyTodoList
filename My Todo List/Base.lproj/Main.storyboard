@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PWU-VV-Mnp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PWU-VV-Mnp">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,14 +40,24 @@
                                     <constraint firstAttribute="width" constant="200" id="ubn-4O-VrC"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UR-fe-mCs">
+                                <rect key="frame" x="78.333333333333329" y="513" width="236.33333333333337" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ProfileDesignViewController"/>
+                                <connections>
+                                    <action selector="ProfileDesignViewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYQ-cm-NGX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8UR-fe-mCs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="680-KC-xEl"/>
                             <constraint firstItem="DZ9-cu-mvq" firstAttribute="top" secondItem="9wX-Lg-KWu" secondAttribute="bottom" constant="60" id="8H9-mL-sD3"/>
                             <constraint firstItem="9wX-Lg-KWu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="BHy-EP-yZY"/>
                             <constraint firstItem="DZ9-cu-mvq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M3x-3y-5h2"/>
                             <constraint firstItem="wfm-bw-vir" firstAttribute="top" secondItem="DZ9-cu-mvq" secondAttribute="bottom" constant="30" id="Pw8-wI-H6m"/>
+                            <constraint firstItem="8UR-fe-mCs" firstAttribute="top" secondItem="wfm-bw-vir" secondAttribute="bottom" constant="50" id="Vgm-8X-AEN"/>
                             <constraint firstItem="9wX-Lg-KWu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r17-16-Xo5"/>
                             <constraint firstItem="wfm-bw-vir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sgD-Cy-Yag"/>
                         </constraints>

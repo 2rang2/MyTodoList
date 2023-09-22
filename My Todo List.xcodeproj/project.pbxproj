@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2635D6272ABAC877006CDDB8 /* ProfileDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D6262ABAC877006CDDB8 /* ProfileDesignViewController.swift */; };
+		2635D62A2ABAFD8E006CDDB8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2635D6292ABAFD8E006CDDB8 /* SnapKit */; };
+		2635D62C2ABAFD8E006CDDB8 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2635D62B2ABAFD8E006CDDB8 /* SnapKit-Dynamic */; };
+		2635D62E2ABB35B4006CDDB8 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D62D2ABB35B4006CDDB8 /* GridCollectionViewCell.swift */; };
+		2635D6302ABB4B73006CDDB8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D62F2ABB4B73006CDDB8 /* ProfileViewController.swift */; };
+		2635D6322ABB4C28006CDDB8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D6312ABB4C28006CDDB8 /* Model.swift */; };
+		2635D6342ABB4C7E006CDDB8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2635D6332ABB4C7E006CDDB8 /* ViewModel.swift */; };
 		26A896BF2AA0E56B00205380 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 26A896BE2AA0E56B00205380 /* Alamofire */; };
 		26A9B0FB2A83793400D1A682 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A9B0FA2A83793400D1A682 /* CompleteViewController.swift */; };
 		26A9B0FD2A838A0600D1A682 /* CompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A9B0FC2A838A0600D1A682 /* CompleteTableViewCell.swift */; };
-		26B4DA442A8094C700717BAC /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4DA432A8094C700717BAC /* Todo.swift */; };
+		26A9FB4C2ABCD1A300BA77CB /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26A9FB4A2ABCD1A300BA77CB /* Todo.xcdatamodeld */; };
 		26B4DA462A81175A00717BAC /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B4DA452A81175A00717BAC /* TodoManager.swift */; };
 		26B794652A7CB95200DC276C /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B794642A7CB95200DC276C /* ToDoTableViewCell.swift */; };
 		7FB2E8C92A7BA83600D45A67 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB2E8C82A7BA83600D45A67 /* ToDoViewController.swift */; };
@@ -23,9 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2635D6262ABAC877006CDDB8 /* ProfileDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignViewController.swift; sourceTree = "<group>"; };
+		2635D62D2ABB35B4006CDDB8 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
+		2635D62F2ABB4B73006CDDB8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2635D6312ABB4C28006CDDB8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2635D6332ABB4C7E006CDDB8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		26A9B0FA2A83793400D1A682 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 		26A9B0FC2A838A0600D1A682 /* CompleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteTableViewCell.swift; sourceTree = "<group>"; };
-		26B4DA432A8094C700717BAC /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		26A9FB4B2ABCD1A300BA77CB /* Todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo.xcdatamodel; sourceTree = "<group>"; };
 		26B4DA452A81175A00717BAC /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
 		26B794642A7CB95200DC276C /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		7FB2E8C82A7BA83600D45A67 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
@@ -45,29 +57,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A896BF2AA0E56B00205380 /* Alamofire in Frameworks */,
+				2635D62A2ABAFD8E006CDDB8 /* SnapKit in Frameworks */,
+				2635D62C2ABAFD8E006CDDB8 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26BCE0882A84E456001F696D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				26B4DA432A8094C700717BAC /* Todo.swift */,
-				26B4DA452A81175A00717BAC /* TodoManager.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		26BCE0892A84E470001F696D /* Controllers */ = {
+		2635D6042ABAB2F2006CDDB8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7FCC636A2A79158C0085B38F /* ViewController.swift */,
 				7FB2E8C82A7BA83600D45A67 /* ToDoViewController.swift */,
 				26A9B0FA2A83793400D1A682 /* CompleteViewController.swift */,
+				2635D6262ABAC877006CDDB8 /* ProfileDesignViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		26A9FB3D2ABC272300BA77CB /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				2635D6312ABB4C28006CDDB8 /* Model.swift */,
+				2635D6332ABB4C7E006CDDB8 /* ViewModel.swift */,
+				2635D62F2ABB4B73006CDDB8 /* ProfileViewController.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		26BCE0882A84E456001F696D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26B4DA452A81175A00717BAC /* TodoManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26BCE0892A84E470001F696D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2635D6042ABAB2F2006CDDB8 /* Controllers */,
+				26B794642A7CB95200DC276C /* ToDoTableViewCell.swift */,
+				26A9B0FC2A838A0600D1A682 /* CompleteTableViewCell.swift */,
+				2635D62D2ABB35B4006CDDB8 /* GridCollectionViewCell.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		7FCC635A2A79158C0085B38F = {
@@ -89,12 +124,12 @@
 		7FCC63652A79158C0085B38F /* My Todo List */ = {
 			isa = PBXGroup;
 			children = (
+				26A9FB3D2ABC272300BA77CB /* MVVM */,
 				26BCE0882A84E456001F696D /* Model */,
-				26BCE0892A84E470001F696D /* Controllers */,
-				26B794642A7CB95200DC276C /* ToDoTableViewCell.swift */,
-				26A9B0FC2A838A0600D1A682 /* CompleteTableViewCell.swift */,
+				26BCE0892A84E470001F696D /* UI */,
 				7FCC63662A79158C0085B38F /* AppDelegate.swift */,
 				7FCC63682A79158C0085B38F /* SceneDelegate.swift */,
+				26A9FB4A2ABCD1A300BA77CB /* Todo.xcdatamodeld */,
 				7FCC636C2A79158C0085B38F /* Main.storyboard */,
 				7FCC636F2A79158E0085B38F /* Assets.xcassets */,
 				7FCC63712A79158E0085B38F /* LaunchScreen.storyboard */,
@@ -121,6 +156,8 @@
 			name = "My Todo List";
 			packageProductDependencies = (
 				26A896BE2AA0E56B00205380 /* Alamofire */,
+				2635D6292ABAFD8E006CDDB8 /* SnapKit */,
+				2635D62B2ABAFD8E006CDDB8 /* SnapKit-Dynamic */,
 			);
 			productName = "My Todo List";
 			productReference = 7FCC63632A79158C0085B38F /* My Todo List.app */;
@@ -152,6 +189,7 @@
 			mainGroup = 7FCC635A2A79158C0085B38F;
 			packageReferences = (
 				26A896BD2AA0E56B00205380 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2635D6282ABAFD8E006CDDB8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 7FCC63642A79158C0085B38F /* Products */;
 			projectDirPath = "";
@@ -180,10 +218,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B4DA442A8094C700717BAC /* Todo.swift in Sources */,
 				7FB2E8C92A7BA83600D45A67 /* ToDoViewController.swift in Sources */,
+				26A9FB4C2ABCD1A300BA77CB /* Todo.xcdatamodeld in Sources */,
 				7FCC636B2A79158C0085B38F /* ViewController.swift in Sources */,
 				26B4DA462A81175A00717BAC /* TodoManager.swift in Sources */,
+				2635D6272ABAC877006CDDB8 /* ProfileDesignViewController.swift in Sources */,
+				2635D62E2ABB35B4006CDDB8 /* GridCollectionViewCell.swift in Sources */,
+				2635D6342ABB4C7E006CDDB8 /* ViewModel.swift in Sources */,
+				2635D6322ABB4C28006CDDB8 /* Model.swift in Sources */,
+				2635D6302ABB4B73006CDDB8 /* ProfileViewController.swift in Sources */,
 				7FCC63672A79158C0085B38F /* AppDelegate.swift in Sources */,
 				7FCC63692A79158C0085B38F /* SceneDelegate.swift in Sources */,
 				26A9B0FD2A838A0600D1A682 /* CompleteTableViewCell.swift in Sources */,
@@ -408,6 +451,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2635D6282ABAFD8E006CDDB8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 		26A896BD2AA0E56B00205380 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -419,12 +470,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2635D6292ABAFD8E006CDDB8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2635D6282ABAFD8E006CDDB8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2635D62B2ABAFD8E006CDDB8 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2635D6282ABAFD8E006CDDB8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
 		26A896BE2AA0E56B00205380 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 26A896BD2AA0E56B00205380 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		26A9FB4A2ABCD1A300BA77CB /* Todo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26A9FB4B2ABCD1A300BA77CB /* Todo.xcdatamodel */,
+			);
+			currentVersion = 26A9FB4B2ABCD1A300BA77CB /* Todo.xcdatamodel */;
+			path = Todo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7FCC635B2A79158C0085B38F /* Project object */;
 }
